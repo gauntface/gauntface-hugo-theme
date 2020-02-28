@@ -1,0 +1,36 @@
+{
+  "name": "@gauntface/hugo-theme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "This repo contains a theme for gauntface.com",
+  "scripts": {
+    "build": "gulp build",
+    "build-into-site": "npm install && gulp build-into-site",
+    "test": "ava ./test/*-test.js --verbose"
+  },
+  "devDependencies": {
+    "@hopin/wbt-clean": "0.0.35",
+    "@hopin/wbt-css": "0.0.35",
+    "@hopin/wbt-ts-browser": "0.0.35",
+    "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
+    "ava": "^3.1.0",
+    "dir-compare": "^2.2.0",
+    "gulp": "4.0.2"
+  },
+  "dependencies": {
+    "fs-extra": "8.1.0"
+  },
+  "main": "index.js",
+  "files": [
+    "build/*",
+    "content/*",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauntface/hopin-hugo-styleguide.git"
+  }
+}
