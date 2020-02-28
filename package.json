@@ -12,11 +12,11 @@
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
-    "@hopin/hugo-base-theme": "0.0.26",
-    "@hopin/hugo-styleguide": "0.0.15",
-    "@hopin/wbt-clean": "0.0.36",
-    "@hopin/wbt-css": "0.0.36",
-    "@hopin/wbt-ts-browser": "0.0.36",
+    "@hopin/hugo-base-theme": "0.0.34",
+    "@hopin/hugo-styleguide": "0.0.19",
+    "@hopin/wbt-clean": "0.0.37",
+    "@hopin/wbt-css": "0.0.37",
+    "@hopin/wbt-ts-browser": "0.0.37",
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
     "ava": "^3.1.0",
     "dir-compare": "^2.2.0",
