@@ -1,7 +1,7 @@
 {
    "baseURL": "http://example.org/",
    "languageCode": "en-us",
-   "theme": ["gauntface-theme", "hopin-styleguide", "hopin-base-theme"],
+   "theme": ["gauntface", "hopin-base-theme", "hopin-styleguide"],
    "params": {
    }
 }
