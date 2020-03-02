@@ -3,5 +3,10 @@
    "languageCode": "en-us",
    "theme": ["gauntface", "hopin-base-theme", "hopin-styleguide"],
    "params": {
+   },
+   "markup": {
+      "highlight": {
+         "noClasses": false
+      }
    }
 }

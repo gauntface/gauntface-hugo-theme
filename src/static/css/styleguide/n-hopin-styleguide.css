@@ -1,0 +1,6 @@
+:root {
+  --hopin-home-item-color-1: var(--green);
+  --hopin-home-item-color-2: var(--blue);
+  --hopin-home-item-color-3: var(--red);
+  --hopin-home-item-outline: var(--muted);
+}
