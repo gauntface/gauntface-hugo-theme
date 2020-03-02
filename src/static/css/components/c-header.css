@@ -1,0 +1,29 @@
+.c-header {
+  color: var(--lightest);
+  padding: var(--page-padding);
+
+  background: repeating-linear-gradient(
+  -65deg,
+  var(--light-pink),
+  var(--light-pink) 20%,
+  var(--yellow) 20%,
+  var(--yellow) 26%,
+  var(--green) 26%,
+  var(--green) 32%,
+  var(--blue) 32%,
+  var(--blue) 38%,
+  var(--red) 38%,
+  var(--red) 44%,
+  var(--dark-blue) 44%,
+  var(--dark-blue) 100%
+);
+}
+
+.c-header__logo svg {
+  width: 64px;
+  height: 64px;
+}
+
+.c-header__logo svg path {
+  fill: var(--light-pink);
+}
