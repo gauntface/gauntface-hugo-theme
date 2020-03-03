@@ -1,29 +1,14 @@
 .c-header {
-  color: var(--lightest);
+  color: var(--platnum);
   padding: var(--page-padding);
-
-  background: repeating-linear-gradient(
-  -65deg,
-  var(--light-pink),
-  var(--light-pink) 20%,
-  var(--yellow) 20%,
-  var(--yellow) 26%,
-  var(--green) 26%,
-  var(--green) 32%,
-  var(--blue) 32%,
-  var(--blue) 38%,
-  var(--red) 38%,
-  var(--red) 44%,
-  var(--dark-blue) 44%,
-  var(--dark-blue) 100%
-);
+  background: var(--liberty);
 }
 
 .c-header__logo svg {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 .c-header__logo svg path {
-  fill: var(--light-pink);
+  fill: var(--platnum);
 }

@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+}
+
+.c-footer__corner {
+  flex: 1;
+}
+
+.c-footer__corner svg {
+  margin-left: auto;
+}
+
+.c-footer__content {
+  width: 60%;
+  margin-left: auto;
+  background: var(--liberty);
+}

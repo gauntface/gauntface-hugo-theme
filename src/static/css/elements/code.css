@@ -1,3 +1,5 @@
 code {
+  padding: 0 4px;
   font-family: var(--code-font-family);
+  background: var(--pale-chestnut);
 }
