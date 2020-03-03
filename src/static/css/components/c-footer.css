@@ -1,7 +1,7 @@
-footer {
+.c-footer {
   display: flex;
   flex-direction: row;
-  min-height: 200px;
+  height: 80px;
 }
 
 .c-footer__corner {
@@ -9,11 +9,22 @@ footer {
 }
 
 .c-footer__corner svg {
+  display: block;
+  width:80%;
+  height: 100%;
   margin-left: auto;
 }
 
 .c-footer__content {
-  width: 60%;
+  flex: 2;
   margin-left: auto;
   background: var(--liberty);
+}
+
+@media (min-width: 1000px) {
+  .c-footer {
+    width: 80%;
+    margin-left: auto;
+    height: 200px;
+  }
 }
