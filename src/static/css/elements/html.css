@@ -1,3 +1,10 @@
+@import "../variables/fonts.css";
+@import "../variables/dimensions.css";
+
+@import "../variables/compliment-colors.css";
+@import "../variables/greyscale-colors.css";
+@import "../variables/primary-colors.css";
+
 html {
   font-size: var(--default-font-size);
 }

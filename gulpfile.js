@@ -7,6 +7,7 @@ const css = require('@hopin/wbt-css');
 const clean = require('@hopin/wbt-clean');
 const html = require('@hopin/wbt-html-assets'); 
 const fs = require('fs-extra');
+const browserSync = require('browser-sync').create();
 
 const hopinstyleguide = require('@hopin/hugo-styleguide');
 const basetheme = require('@hopin/hugo-base-theme');
@@ -207,5 +208,20 @@ gulp.task('watch',
       'themes',
       'hugo-server',
     ),
+  )
+);
+
+gulp.task('browser-sync', async () => {
+  browserSync.init({
+    server: {
+        baseDir: styleguidePublicDir,
+    }
+});
+});
+
+gulp.task('prod',
+  gulp.series(
+    'build-styleguide',
+    'browser-sync',
   )
 );
