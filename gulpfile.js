@@ -124,10 +124,11 @@ gulp.task('hugo-build', () => {
   });
 })
 
-gulp.task('html', html.gulpProcessFiles(
-  styleguidePublicDir,
-  path.join(styleguidePublicDir, 'static'),
-));
+gulp.task('html', html.gulpProcessFiles({
+  htmlPaths: styleguidePublicDir,
+  assetPaths: path.join(styleguidePublicDir, 'static'),
+  })
+);
 
 gulp.task('build-styleguide', gulp.series(
   gulp.parallel(
@@ -136,7 +137,7 @@ gulp.task('build-styleguide', gulp.series(
   ),
   'themes',
   'hugo-build',
-  
+  'html',
 ))
 
 /**
