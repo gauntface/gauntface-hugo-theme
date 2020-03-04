@@ -104,6 +104,26 @@ gulp.task('themes', gulp.parallel(
   'base-theme',
 ))
 
+gulp.task('hugo-version', () => {
+  return new Promise((resolve, reject) => {
+    const versionCmd = spawn('hugo', ['version'], {
+      stdio: 'inherit',
+      cwd: styleguideDir,
+    });
+    versionCmd.on('error', (err) => {
+      console.error('Failed to run hugo server: ', err);
+      reject(err);
+    });
+    versionCmd.addListener('exit', (code) => {
+      if (code != 0) {
+        reject(new Error(`Exited with non-zero code '${code}'`));
+        return
+      }
+      resolve();
+    });
+  });
+})
+
 gulp.task('hugo-build', () => {
   return new Promise((resolve, reject) => {
     const buildCmd = spawn('hugo', [], {
@@ -136,6 +156,7 @@ gulp.task('build-styleguide', gulp.series(
     'clean-example',
   ),
   'themes',
+  'hugo-version',
   'hugo-build',
   'html',
 ))
