@@ -146,7 +146,7 @@ gulp.task('hugo-build', () => {
 
 gulp.task('html', html.gulpProcessFiles({
   htmlPaths: styleguidePublicDir,
-  assetPaths: path.join(styleguidePublicDir, 'static'),
+  assetPaths: styleguidePublicDir,
   })
 );
 
