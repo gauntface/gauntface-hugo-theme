@@ -1,0 +1,8 @@
+.l-default {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-default__main {
+  padding: var(--page-padding);
+}

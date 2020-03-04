@@ -1,12 +1,14 @@
 const gulp = require('gulp');
 const path = require('path');
+const spawn = require('child_process').spawn;
+
 const tsBrowser = require('@hopin/wbt-ts-browser'); 
 const css = require('@hopin/wbt-css');
 const clean = require('@hopin/wbt-clean');
-const {promisify} = require('util');
-const spawn = require('child_process').spawn;
 const fs = require('fs-extra');
-const hopinstyleguide = require('./index');
+const hopinstyleguide = require('@hopin/hugo-styleguide');
+const basetheme = require('@hopin/hugo-base-theme');
+const gftheme = require('./index');
 
 const themeSrc = path.join(__dirname, 'src');
 const themeDst = path.join(__dirname, 'build');
@@ -23,7 +25,7 @@ gulp.task('typescript', gulp.series(
 ))
 
 gulp.task('css', gulp.series(
-  css.gulpBuildAll({
+  css.gulpBuild({
     src: themeSrc,
     dst: themeDst,
   }, {
@@ -51,7 +53,15 @@ gulp.task('build', gulp.series(
  * The following are tasks are helpful for local dev and testing
  */
 
-gulp.task('copy-styleguide', async () => {
+gulp.task('gauntface-theme', async () => {
+  const themeDir = path.join(__dirname, 'example', 'themes', 'gauntface')
+
+  await fs.remove(themeDir);
+
+  await gftheme.copyTheme(themeDir);
+})
+
+gulp.task('styleguide', async () => {
   const themeDir = path.join(__dirname, 'example', 'themes', 'hopin-styleguide')
   const contentDir = path.join(__dirname, 'example', 'content');
 
@@ -60,6 +70,14 @@ gulp.task('copy-styleguide', async () => {
 
   await hopinstyleguide.copyTheme(themeDir);
   await hopinstyleguide.copyContent(contentDir);
+})
+
+gulp.task('base-theme', async () => {
+  const themeDir = path.join(__dirname, 'example', 'themes', 'hopin-base-theme')
+
+  await fs.remove(themeDir);
+
+  await basetheme.copyTheme(themeDir);
 })
 
 let serverInstance;
@@ -92,21 +110,17 @@ gulp.task('restart-server', async () => {
 
 gulp.task('watch-theme', () => {
   const opts = {};
-  return gulp.watch([path.join(themeSrc, '**', '*')], opts, gulp.series('build', 'copy-styleguide', 'restart-server'));
-});
-
-gulp.task('watch-content', () => {
-  const opts = {};
-  return gulp.watch([path.join(__dirname, 'content', '**', '*')], opts, gulp.series('copy-styleguide', 'restart-server'));
+  return gulp.watch([path.join(themeSrc, '**', '*')], opts, gulp.series('build', 'gauntface-theme', 'restart-server'));
 });
 
 gulp.task('watch',
   gulp.parallel(
     'watch-theme',
-    'watch-content',
     gulp.series(
       'build',
-      'copy-styleguide',
+      'styleguide',
+      'base-theme',
+      'gauntface-theme',
       'hugo-server',
     ),
   )

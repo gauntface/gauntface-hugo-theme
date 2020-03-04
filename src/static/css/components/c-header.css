@@ -1,0 +1,14 @@
+.c-header {
+  color: var(--platnum);
+  padding: var(--page-padding);
+  background: var(--liberty);
+}
+
+.c-header__logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.c-header__logo svg path {
+  fill: var(--platnum);
+}
