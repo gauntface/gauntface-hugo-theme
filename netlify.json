@@ -1,9 +1,7 @@
 {
   "context": {
-    "production": {
-      "environment": {
-        "HUGO_VERSION": "0.62"
-      }
+    "environment": {
+      "HUGO_VERSION": "0.62"
     }
   }
 }
