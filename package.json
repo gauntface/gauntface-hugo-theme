@@ -8,7 +8,6 @@
   "description": "This repo contains a theme for gauntface.com",
   "scripts": {
     "build": "gulp build",
-    "build-into-site": "npm install && gulp build-into-site",
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {

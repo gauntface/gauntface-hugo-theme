@@ -1,4 +1,5 @@
-example/themes/
-example/resources/
-example/content/
+styleguide/themes/
+styleguide/resources/
+styleguide/content/
+styleguide/public/
 node_modules/

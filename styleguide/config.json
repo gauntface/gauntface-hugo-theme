@@ -1,5 +1,6 @@
 {
-   "baseURL": "http://example.org/",
+   "baseURL": "https://styleguide.gauntface.com/",
+   "title": "Stylguide for gauntface.com",
    "languageCode": "en-us",
    "theme": ["gauntface", "hopin-base-theme", "hopin-styleguide"],
    "params": {

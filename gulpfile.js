@@ -10,11 +10,16 @@ const hopinstyleguide = require('@hopin/hugo-styleguide');
 const basetheme = require('@hopin/hugo-base-theme');
 const gftheme = require('./index');
 
+/**
+ * Build theme package
+ */
 const themeSrc = path.join(__dirname, 'src');
 const themeDst = path.join(__dirname, 'build');
 
 gulp.task('clean', gulp.series(
-  clean.gulpClean([themeDst]),
+  clean.gulpClean([
+    themeDst,
+  ]),
 ))
 
 gulp.task('typescript', gulp.series(
@@ -50,20 +55,30 @@ gulp.task('build', gulp.series(
 ))
 
 /**
- * The following are tasks are helpful for local dev and testing
+ * Build styleguide site
  */
 
+const styleguideDir = path.join(__dirname, 'styleguide');
+
+gulp.task('clean-example', gulp.series(
+  clean.gulpClean([
+    path.join(styleguideDir, 'public'),
+    path.join(styleguideDir, 'themes'),
+    path.join(styleguideDir, 'content'),
+  ])
+))
+
 gulp.task('gauntface-theme', async () => {
-  const themeDir = path.join(__dirname, 'example', 'themes', 'gauntface')
+  const themeDir = path.join(styleguideDir, 'themes', 'gauntface')
 
   await fs.remove(themeDir);
 
   await gftheme.copyTheme(themeDir);
 })
 
-gulp.task('styleguide', async () => {
-  const themeDir = path.join(__dirname, 'example', 'themes', 'hopin-styleguide')
-  const contentDir = path.join(__dirname, 'example', 'content');
+gulp.task('styleguide-theme', async () => {
+  const themeDir = path.join(styleguideDir, 'themes', 'hopin-styleguide')
+  const contentDir = path.join(styleguideDir, 'content');
 
   await fs.remove(themeDir);
   await fs.remove(contentDir);
@@ -73,19 +88,58 @@ gulp.task('styleguide', async () => {
 })
 
 gulp.task('base-theme', async () => {
-  const themeDir = path.join(__dirname, 'example', 'themes', 'hopin-base-theme')
+  const themeDir = path.join(styleguideDir, 'themes', 'hopin-base-theme')
 
   await fs.remove(themeDir);
 
   await basetheme.copyTheme(themeDir);
 })
 
+gulp.task('themes', gulp.parallel(
+  'gauntface-theme',
+  'styleguide-theme',
+  'base-theme',
+))
+
+gulp.task('hugo-build', () => {
+  return new Promise((resolve, reject) => {
+    const buildCmd = spawn('hugo', [], {
+      stdio: 'inherit',
+      cwd: styleguideDir,
+    });
+    buildCmd.on('error', (err) => {
+      console.error('Failed to run hugo server: ', err);
+      reject(err);
+    });
+    buildCmd.addListener('exit', (code) => {
+      if (code != 0) {
+        reject(new Error(`Exited with non-zero code '${code}'`));
+        return
+      }
+      resolve();
+    });
+  });
+})
+
+gulp.task('build-styleguide', gulp.series(
+  gulp.parallel(
+    'build',
+    'clean-example',
+  ),
+  'themes',
+  'hugo-build'
+))
+
+/**
+ * The following are tasks are helpful for local dev and testing
+ */
+
 let serverInstance;
 
-function startServer() {
+async function startServer() {
   serverInstance = spawn('hugo', ['server', '-D', '--ignoreCache'], {
     stdio: 'inherit',
-    cwd: path.join(__dirname, 'example'),
+    cwd: styleguideDir,
   });
   serverInstance.on('error', (err) => {
     console.error('Failed to run hugo server: ', err);
@@ -96,21 +150,22 @@ function startServer() {
   });
 }
 
-gulp.task('hugo-server',
-  gulp.series(startServer)
-);
+gulp.task('hugo-server', startServer);
 
 gulp.task('restart-server', async () => {
   if (!serverInstance) {
     return;
   }
-
   serverInstance.kill();
 });
 
 gulp.task('watch-theme', () => {
   const opts = {};
-  return gulp.watch([path.join(themeSrc, '**', '*')], opts, gulp.series('build', 'gauntface-theme', 'restart-server'));
+  return gulp.watch(
+    [path.join(themeSrc, '**', '*')],
+    opts,
+    gulp.series('build', 'gauntface-theme', 'restart-server'),
+  );
 });
 
 gulp.task('watch',
@@ -118,9 +173,7 @@ gulp.task('watch',
     'watch-theme',
     gulp.series(
       'build',
-      'styleguide',
-      'base-theme',
-      'gauntface-theme',
+      'themes',
       'hugo-server',
     ),
   )
