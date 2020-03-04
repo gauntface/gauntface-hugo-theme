@@ -5,7 +5,9 @@ const spawn = require('child_process').spawn;
 const tsBrowser = require('@hopin/wbt-ts-browser'); 
 const css = require('@hopin/wbt-css');
 const clean = require('@hopin/wbt-clean');
+const html = require('@hopin/wbt-html-assets'); 
 const fs = require('fs-extra');
+
 const hopinstyleguide = require('@hopin/hugo-styleguide');
 const basetheme = require('@hopin/hugo-base-theme');
 const gftheme = require('./index');
@@ -59,6 +61,7 @@ gulp.task('build', gulp.series(
  */
 
 const styleguideDir = path.join(__dirname, 'styleguide');
+const styleguidePublicDir = path.join(__dirname, 'styleguide', 'public');
 
 gulp.task('clean-example', gulp.series(
   clean.gulpClean([
@@ -121,13 +124,19 @@ gulp.task('hugo-build', () => {
   });
 })
 
+gulp.task('html', html.gulpProcessFiles(
+  styleguidePublicDir,
+  path.join(styleguidePublicDir, 'static'),
+));
+
 gulp.task('build-styleguide', gulp.series(
   gulp.parallel(
     'build',
     'clean-example',
   ),
   'themes',
-  'hugo-build'
+  'hugo-build',
+  
 ))
 
 /**
