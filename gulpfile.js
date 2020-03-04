@@ -5,7 +5,9 @@ const spawn = require('child_process').spawn;
 const tsBrowser = require('@hopin/wbt-ts-browser'); 
 const css = require('@hopin/wbt-css');
 const clean = require('@hopin/wbt-clean');
+const html = require('@hopin/wbt-html-assets'); 
 const fs = require('fs-extra');
+
 const hopinstyleguide = require('@hopin/hugo-styleguide');
 const basetheme = require('@hopin/hugo-base-theme');
 const gftheme = require('./index');
@@ -59,6 +61,7 @@ gulp.task('build', gulp.series(
  */
 
 const styleguideDir = path.join(__dirname, 'styleguide');
+const styleguidePublicDir = path.join(__dirname, 'styleguide', 'public');
 
 gulp.task('clean-example', gulp.series(
   clean.gulpClean([
@@ -101,6 +104,26 @@ gulp.task('themes', gulp.parallel(
   'base-theme',
 ))
 
+gulp.task('hugo-version', () => {
+  return new Promise((resolve, reject) => {
+    const versionCmd = spawn('hugo', ['version'], {
+      stdio: 'inherit',
+      cwd: styleguideDir,
+    });
+    versionCmd.on('error', (err) => {
+      console.error('Failed to run hugo server: ', err);
+      reject(err);
+    });
+    versionCmd.addListener('exit', (code) => {
+      if (code != 0) {
+        reject(new Error(`Exited with non-zero code '${code}'`));
+        return
+      }
+      resolve();
+    });
+  });
+})
+
 gulp.task('hugo-build', () => {
   return new Promise((resolve, reject) => {
     const buildCmd = spawn('hugo', [], {
@@ -121,13 +144,21 @@ gulp.task('hugo-build', () => {
   });
 })
 
+gulp.task('html', html.gulpProcessFiles({
+  htmlPaths: styleguidePublicDir,
+  assetPaths: styleguidePublicDir,
+  })
+);
+
 gulp.task('build-styleguide', gulp.series(
   gulp.parallel(
     'build',
     'clean-example',
   ),
   'themes',
-  'hugo-build'
+  'hugo-version',
+  'hugo-build',
+  'html',
 ))
 
 /**
