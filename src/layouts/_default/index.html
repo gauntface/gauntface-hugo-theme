@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "layouts/l-default-open.html"}}
+{{.Content}}
+
+<h2>Some Posts.</h2>
+
+{{- $blogPosts := where $.Site.RegularPages "Section" "blog" -}}
+
+<ol>
+{{ range first 5 $blogPosts }}
+<li>{{.Date.Format "2006-01-02"}}: <a href="{{.Permalink}}">{{.Title}}</a></li>
+<li>{{ .Params.excerpt }}</li>
+{{ end }}
+</ol>
+
+{{ partial "layouts/l-default-close.html"}}
+{{ end }}

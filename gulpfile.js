@@ -192,7 +192,9 @@ gulp.task('restart-server', async () => {
 });
 
 gulp.task('watch-theme', () => {
-  const opts = {};
+  const opts = {
+    ignoreInitial: false,
+  };
   return gulp.watch(
     [path.join(themeSrc, '**', '*')],
     opts,
@@ -216,7 +218,7 @@ gulp.task('browser-sync', async () => {
     server: {
         baseDir: styleguidePublicDir,
     }
-});
+  });
 });
 
 gulp.task('prod',
