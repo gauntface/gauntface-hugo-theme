@@ -11,7 +11,7 @@
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
-    "@hopin/hugo-base-theme": "0.0.61",
+    "@hopin/hugo-base-theme": "0.0.63",
     "@hopin/hugo-styleguide": "0.0.50",
     "@hopin/wbt-clean": "0.0.44",
     "@hopin/wbt-css": "0.0.44",
