@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - master
-
+name: Deploy Site
 jobs:
   deploy:
     runs-on: ubuntu-18.04
