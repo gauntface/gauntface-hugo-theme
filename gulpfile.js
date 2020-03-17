@@ -2,10 +2,10 @@ const gulp = require('gulp');
 const path = require('path');
 const spawn = require('child_process').spawn;
 
-const tsBrowser = require('@hopin/wbt-ts-browser'); 
+const tsBrowser = require('@hopin/wbt-ts-browser');
 const css = require('@hopin/wbt-css');
 const clean = require('@hopin/wbt-clean');
-const html = require('@hopin/wbt-html-assets'); 
+const html = require('@hopin/wbt-html-assets');
 const fs = require('fs-extra');
 const browserSync = require('browser-sync').create();
 
@@ -44,7 +44,7 @@ gulp.task('css', gulp.series(
 gulp.task('copy', gulp.series(
   () => {
     return gulp.src(path.join(themeSrc, '**/*.{toml,json,html,svg,jpg,jpeg,gif}'))
-    .pipe(gulp.dest(themeDst));
+      .pipe(gulp.dest(themeDst));
   }
 ))
 
@@ -148,7 +148,7 @@ gulp.task('hugo-build', () => {
 gulp.task('html', html.gulpProcessFiles({
   htmlPaths: styleguidePublicDir,
   assetPaths: styleguidePublicDir,
-  })
+})
 );
 
 gulp.task('build-styleguide', gulp.series(
@@ -216,7 +216,7 @@ gulp.task('watch',
 gulp.task('browser-sync', async () => {
   browserSync.init({
     server: {
-        baseDir: styleguidePublicDir,
+      baseDir: styleguidePublicDir,
     }
   });
 });

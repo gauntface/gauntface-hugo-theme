@@ -16,11 +16,11 @@ jobs:
     - name: Install
       run: npm install
     - name: Build
-      run: npm run build
+      run: npm run build-styleguide
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.DEPLOY_TOKEN }}
         external_repository: gauntface/styleguide.gauntface.com
         publish_branch: master
-        publish_dir: ./public
+        publish_dir: ./styleguide/public
