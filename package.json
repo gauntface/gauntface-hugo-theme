@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@hopin/hugo-base-theme": "0.0.106",
-    "@hopin/hugo-styleguide": "0.0.78",
+    "@hopin/hugo-styleguide": "0.0.79",
     "@hopin/wbt-clean": "0.0.55",
     "@hopin/wbt-css": "0.0.54",
     "@hopin/wbt-html-assets": "0.0.54",
