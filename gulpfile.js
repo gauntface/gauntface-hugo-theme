@@ -99,7 +99,7 @@ gulp.task('base-theme', async () => {
   await basetheme.copyTheme(themeDir);
 })
 
-gulp.task('themes', gulp.parallel(
+gulp.task('themes', gulp.series(
   'gauntface-theme',
   'styleguide-theme',
   'base-theme',
@@ -169,7 +169,7 @@ gulp.task('build-styleguide', gulp.series(
 let serverInstance;
 
 async function startServer() {
-  serverInstance = spawn('hugo', ['server', '-D', '--ignoreCache'], {
+  serverInstance = spawn('hugo', ['server', '-D', '--ignoreCache', '--port=1314'], {
     stdio: 'inherit',
     cwd: styleguideDir,
   });

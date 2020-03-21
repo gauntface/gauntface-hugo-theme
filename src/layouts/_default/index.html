@@ -7,10 +7,10 @@
 {{- $blogPosts := where $.Site.RegularPages "Section" "blog" -}}
 
 <ol>
-{{ range first 5 $blogPosts }}
-<li>{{.Date.Format "2006-01-02"}}: <a href="{{.Permalink}}">{{.Title}}</a></li>
-<li>{{ .Params.excerpt }}</li>
-{{ end }}
+  {{ range first 5 $blogPosts }}
+  <li>{{.Date.Format "2006-01-02"}}: <a href="{{.RelPermalink}}">{{.Title}}</a></li>
+  <li>{{ .Params.excerpt }}</li>
+  {{ end }}
 </ol>
 
 {{ partial "layouts/l-default-close.html"}}
