@@ -12,12 +12,12 @@
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
-    "@hopin/hugo-base-theme": "0.0.96",
-    "@hopin/hugo-styleguide": "0.0.73",
-    "@hopin/wbt-clean": "0.0.52",
-    "@hopin/wbt-css": "0.0.50",
-    "@hopin/wbt-html-assets": "0.0.52",
-    "@hopin/wbt-ts-browser": "0.0.52",
+    "@hopin/hugo-base-theme": "0.0.118",
+    "@hopin/hugo-styleguide": "0.0.85",
+    "@hopin/wbt-clean": "0.0.57",
+    "@hopin/wbt-css": "0.0.57",
+    "@hopin/wbt-html-assets": "0.0.57",
+    "@hopin/wbt-ts-browser": "0.0.57",
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
     "ava": "3.5.0",
     "browser-sync": "2.26.7",
@@ -25,7 +25,7 @@
     "gulp": "4.0.2"
   },
   "dependencies": {
-    "fs-extra": "8.1.0"
+    "fs-extra": "9.0.0"
   },
   "main": "index.js",
   "files": [
