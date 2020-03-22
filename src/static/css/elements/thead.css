@@ -1,4 +1,4 @@
 thead {
-  color: var(--lightest);
-  background-color: var(--dark);
+  color: var(--white);
+  background-color: var(--dark-grey);
 }

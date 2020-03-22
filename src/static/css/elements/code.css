@@ -1,5 +1,7 @@
 code {
-  padding: 0 4px;
+  padding: 0 var(--inline-code-padding);
+  border-radius: var(--inline-code-padding);
   font-family: var(--code-font-family);
-  background: var(--pale-chestnut);
+  background: var(--dark-grey);
+  color: var(--white);
 }

@@ -1,7 +1,7 @@
 .c-header {
   color: var(--platnum);
   padding: var(--header-padding) var(--page-padding);
-  background: var(--liberty);
+  background: var(--dark-grey);
 }
 
 .c-header__logo svg {
@@ -11,5 +11,5 @@
 }
 
 .c-header__logo svg path {
-  fill: var(--platnum);
+  fill: var(--white);
 }

@@ -99,7 +99,7 @@ gulp.task('base-theme', async () => {
   await basetheme.copyTheme(themeDir);
 })
 
-gulp.task('themes', gulp.series(
+gulp.task('themes', gulp.parallel(
   'gauntface-theme',
   'styleguide-theme',
   'base-theme',
@@ -203,11 +203,11 @@ gulp.task('watch-theme', () => {
 });
 
 gulp.task('watch',
-  gulp.parallel(
-    'watch-theme',
-    gulp.series(
-      'build',
-      'themes',
+  gulp.series(
+    'build',
+    'themes',
+    gulp.parallel(
+      'watch-theme',
       'hugo-server',
     ),
   )

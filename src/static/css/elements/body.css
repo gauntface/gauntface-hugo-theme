@@ -4,6 +4,7 @@ body {
   display: inline;
   min-height: 100%;
   font-family: var(--body-font-family);
-  background: var(--platnum);
+  background: var(--white);
+  color: var(--dark-grey);
   margin: 0;
 }
