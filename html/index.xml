@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Htmls on Stylguide for gauntface.com</title>
+    <link>https://styleguide.gauntface.com/html/</link>
+    <description>Recent content in Htmls on Stylguide for gauntface.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://styleguide.gauntface.com/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML Elements</title>
+      <link>https://styleguide.gauntface.com/html/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/html/</guid>
+      <description>HTML Elements Below is a set of example HTML that should be typically supported.
+Header 1 Header 2 Header 3 Header 4 Header 5 Header 6 This is body text which can contain inline links as well as inline code.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+    </item>
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>https://styleguide.gauntface.com/html/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/code/</guid>
+      <description>Javascript const fs = require(&amp;#39;fs-extra&amp;#39;); // Single line comment  /** * Multi-line * Comment */ const read = async (file) =&amp;gt; { const buf = await fs.readFile(file); return buf.toString(); } async function main() { try { await read(&amp;#39;~/example.txt&amp;#39;]); } catch (err) { console.error(`Failed to read file: ${err}`); } } Typescript const fs = require(&amp;#39;fs-extra&amp;#39;); // Single line comment  /** * Multi-line * Comment */ async function read(file: string): Promise&amp;lt;string&amp;gt; { const buf = await fs.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://styleguide.gauntface.com/html/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/typography/</guid>
+      <description> # Typography Below is a set of example HTML with it&#39;s font information added at runtime. Header 1 Header 2 Header 3 Header 4 This is body text
+This is an inline link
+This is bold body text
+This is an inline quote
+This is an inline code snippet
+This is a code block  </description>
+    </item>
+    
+  </channel>
+</rss>

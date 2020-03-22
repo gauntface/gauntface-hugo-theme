@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Partials on Stylguide for gauntface.com</title>
+    <link>https://styleguide.gauntface.com/partials/</link>
+    <description>Recent content in Partials on Stylguide for gauntface.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://styleguide.gauntface.com/partials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Components</title>
+      <link>https://styleguide.gauntface.com/partials/components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/partials/components/</guid>
+      <description>Components are picked up from partials/components/* and will add each partial to the page.
+If you want to add a component to the page with some demo data create a file named &amp;lt;partial name&amp;gt;.styleguide.html, and that will be added to the styleguide instead.
+For example, if partials/componetns/project-card.html needs some text, you can create partials/components/project-card.styleguide.html and give it contents that imports the project-card partial (i.e. {{ partial &amp;quot;styleguide/components/project-card.html&amp;quot; (dict &amp;quot;Title&amp;quot; &amp;quot;Example&amp;quot;) }}).</description>
+    </item>
+    
+    <item>
+      <title>Layouts</title>
+      <link>https://styleguide.gauntface.com/partials/layouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/partials/layouts/</guid>
+      <description>Layouts are picked up from partials/layouts/* and will include files that have the suffix *-open.html and *-close.html.
+l-default   This is some example content
+ Twitter | GitHub | LinkedIn    Code  {{ partial &#34;layouts/l-default-open.html&#34; }} ... {{ partial &#34;layouts/l-default-close.html&#34; }}  </description>
+    </item>
+    
+  </channel>
+</rss>

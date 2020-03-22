@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/variables/colors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/variables/dimensions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/variables/fonts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/html/html/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/html/code/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/html/typography/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/partials/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/partials/layouts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/css-linting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/html/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/partials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://styleguide.gauntface.com/variables/</loc>
+  </url>
+  
+</urlset>

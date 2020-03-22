@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Styleguide on Stylguide for gauntface.com</title>
+    <link>https://styleguide.gauntface.com/</link>
+    <description>Recent content in Styleguide on Stylguide for gauntface.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://styleguide.gauntface.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Colors</title>
+      <link>https://styleguide.gauntface.com/variables/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/variables/colors/</guid>
+      <description>Colors The color palette is derived from CSS variables defined in CSS files ending in colors.css.
+ </description>
+    </item>
+    
+    <item>
+      <title>Dimensions</title>
+      <link>https://styleguide.gauntface.com/variables/dimensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/variables/dimensions/</guid>
+      <description>Dimensions The dimension list is derived from CSS variables defined in CSS files ending in dimensions.css.
+ </description>
+    </item>
+    
+    <item>
+      <title>Fonts</title>
+      <link>https://styleguide.gauntface.com/variables/fonts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/variables/fonts/</guid>
+      <description>Fonts The fonts list is derived from CSS variables defined in CSS files ending in fonts.css.
+ </description>
+    </item>
+    
+    <item>
+      <title>HTML Elements</title>
+      <link>https://styleguide.gauntface.com/html/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/html/</guid>
+      <description>HTML Elements Below is a set of example HTML that should be typically supported.
+Header 1 Header 2 Header 3 Header 4 Header 5 Header 6 This is body text which can contain inline links as well as inline code.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+    </item>
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>https://styleguide.gauntface.com/html/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/code/</guid>
+      <description>Javascript const fs = require(&amp;#39;fs-extra&amp;#39;); // Single line comment  /** * Multi-line * Comment */ const read = async (file) =&amp;gt; { const buf = await fs.readFile(file); return buf.toString(); } async function main() { try { await read(&amp;#39;~/example.txt&amp;#39;]); } catch (err) { console.error(`Failed to read file: ${err}`); } } Typescript const fs = require(&amp;#39;fs-extra&amp;#39;); // Single line comment  /** * Multi-line * Comment */ async function read(file: string): Promise&amp;lt;string&amp;gt; { const buf = await fs.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://styleguide.gauntface.com/html/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/html/typography/</guid>
+      <description> # Typography Below is a set of example HTML with it&#39;s font information added at runtime. Header 1 Header 2 Header 3 Header 4 This is body text
+This is an inline link
+This is bold body text
+This is an inline quote
+This is an inline code snippet
+This is a code block  </description>
+    </item>
+    
+    <item>
+      <title>Components</title>
+      <link>https://styleguide.gauntface.com/partials/components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/partials/components/</guid>
+      <description>Components are picked up from partials/components/* and will add each partial to the page.
+If you want to add a component to the page with some demo data create a file named &amp;lt;partial name&amp;gt;.styleguide.html, and that will be added to the styleguide instead.
+For example, if partials/componetns/project-card.html needs some text, you can create partials/components/project-card.styleguide.html and give it contents that imports the project-card partial (i.e. {{ partial &amp;quot;styleguide/components/project-card.html&amp;quot; (dict &amp;quot;Title&amp;quot; &amp;quot;Example&amp;quot;) }}).</description>
+    </item>
+    
+    <item>
+      <title>Layouts</title>
+      <link>https://styleguide.gauntface.com/partials/layouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/partials/layouts/</guid>
+      <description>Layouts are picked up from partials/layouts/* and will include files that have the suffix *-open.html and *-close.html.
+l-default   This is some example content
+ Twitter | GitHub | LinkedIn    Code  {{ partial &#34;layouts/l-default-open.html&#34; }} ... {{ partial &#34;layouts/l-default-close.html&#34; }}  </description>
+    </item>
+    
+    <item>
+      <title>CSS Linting</title>
+      <link>https://styleguide.gauntface.com/css-linting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://styleguide.gauntface.com/css-linting/</guid>
+      <description>CSS Linting This page will include information on the CSS selectors used in your stylesheets.
+Classnames This script assumes you are following the pattern of:
+.n-hopin-styleguide-c-my-component__sub-section--fancy |__________________|_|___________|____________|_______| | | | | | Namespace | | | | Type | | | Body | | Element | Modifier   The namespace, element and modifier are optional, so you can have names such as:
+.c-header .c-header&amp;ndash;larger .c-header__link
+The type of a selector should be one of the following:</description>
+    </item>
+    
+  </channel>
+</rss>
