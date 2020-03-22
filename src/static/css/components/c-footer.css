@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.c-footer__content {
+  padding: var(--footer-padding);
+}
+
 .c-footer a {
   text-decoration: none;
 }

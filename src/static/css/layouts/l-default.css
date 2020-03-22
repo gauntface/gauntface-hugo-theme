@@ -6,6 +6,8 @@
 }
 
 .l-default__main {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   flex: 1;
   padding: var(--page-padding);
 }
