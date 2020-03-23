@@ -29,6 +29,7 @@
   },
   "main": "index.js",
   "files": [
+    "build/static/css/*.css",
     "build/*",
     "content/*",
     "index.js"
