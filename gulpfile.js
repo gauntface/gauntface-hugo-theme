@@ -43,7 +43,7 @@ gulp.task('css', gulp.series(
 
 gulp.task('copy', gulp.series(
   () => {
-    return gulp.src(path.join(themeSrc, '**/*.{toml,json,html,svg,jpg,jpeg,gif}'))
+    return gulp.src(path.join(themeSrc, '**/*.{toml,json,html,svg,jpg,jpeg,gif,png}'))
       .pipe(gulp.dest(themeDst));
   }
 ))
