@@ -23,7 +23,7 @@
 
   <div class="n-hopin-styleguide-l-main__content">
     <main class="n-hopin-styleguide-l-main__inner">
-<p>Layouts are picked up from <code>partials&sol;layouts&sol;&ast;</code> and will include files that have the suffix <code>&ast;-open.html</code> and <code>&ast;-close.html</code>.</p>
+<p>Layouts are picked up from <code>partials/layouts/*</code> and will include files that have the suffix <code>*-open.html</code> and <code>*-close.html</code>.</p>
 <h2>l-default</h2><div class="n-hopin-styleguide-c-layout-example"><div class="l-default">
   <header class="c-header">
   <a href="/" class="c-header__logo">
@@ -45,16 +45,16 @@
   <main class="l-default__main"><p>This is some example content</p></main>
 <footer class="c-footer">
   <div class="c-footer__content">
-    <a href="://twiter.com/gauntface">Twitter</a> &vert; <a href="://github.com/gauntface">GitHub</a> &vert; <a href="://www.linkedin.com/in/mattgaunt/">LinkedIn</a>
+    <a href="://twiter.com/gauntface">Twitter</a> | <a href="://github.com/gauntface">GitHub</a> | <a href="://www.linkedin.com/in/mattgaunt/">LinkedIn</a>
   </div>
 </footer>
 </div></div>
 
       <h3>Code</h3>
 
-      <pre><code>&lcub;&lcub; partial &quot;layouts&sol;l-default-open.html&quot; &rcub;&rcub;
+      <pre><code>{{ partial &quot;layouts/l-default-open.html&quot; }}
 ...
-&lcub;&lcub; partial &quot;layouts&sol;l-default-close.html&quot; &rcub;&rcub;</code>
+{{ partial &quot;layouts/l-default-close.html&quot; }}</code>
       </pre>
 
 </main>

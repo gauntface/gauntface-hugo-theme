@@ -24,217 +24,217 @@
   <div class="n-hopin-styleguide-l-main__content">
     <main class="n-hopin-styleguide-l-main__inner">
 <h2 id="javascript">Javascript</h2>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">&equals;</span> <span class="nx">require</span><span class="p">&lpar;</span><span class="s1">&apos;fs-extra&apos;</span><span class="p">&rpar;</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&apos;fs-extra&apos;</span><span class="p">)</span><span class="p">;</span>
 
-<span class="c1">&sol;&sol; Single line comment
+<span class="c1">// Single line comment
 </span><span class="c1"></span>
-<span class="cm">&sol;&ast;&ast;
-</span><span class="cm"> &ast; Multi-line
-</span><span class="cm"> &ast; Comment
-</span><span class="cm"> &ast;&sol;</span>
+<span class="cm">/**
+</span><span class="cm"> * Multi-line
+</span><span class="cm"> * Comment
+</span><span class="cm"> */</span>
 
-<span class="kr">const</span> <span class="nx">read</span> <span class="o">&equals;</span> <span class="nx">async</span> <span class="p">&lpar;</span><span class="nx">file</span><span class="p">&rpar;</span> <span class="p">&equals;&gt;</span> <span class="p">&lcub;</span>
-  <span class="kr">const</span> <span class="nx">buf</span> <span class="o">&equals;</span> <span class="nx">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">&lpar;</span><span class="nx">file</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">&lpar;</span><span class="p">&rpar;</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="kr">const</span> <span class="nx">read</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">main</span><span class="p">&lpar;</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-  <span class="k">try</span> <span class="p">&lcub;</span>
-    <span class="nx">await</span> <span class="nx">read</span><span class="p">&lpar;</span><span class="s1">&apos;~&sol;example.txt&apos;</span><span class="p">&rsqb;</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="p">&rcub;</span> <span class="k">catch</span> <span class="p">&lpar;</span><span class="nx">err</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">&lpar;</span><span class="sb">&grave;</span><span class="sb">Failed to read file: </span><span class="si">&dollar;&lcub;</span><span class="nx">err</span><span class="si">&rcub;</span><span class="sb">&grave;</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="p">&rcub;</span>
-<span class="p">&rcub;</span>
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nx">await</span> <span class="nx">read</span><span class="p">(</span><span class="s1">&apos;~/example.txt&apos;</span><span class="p">]</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sb">&grave;</span><span class="sb">Failed to read file: </span><span class="si">${</span><span class="nx">err</span><span class="si">}</span><span class="sb">&grave;</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><h2 id="typescript">Typescript</h2>
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">&equals;</span> <span class="nx">require</span><span class="p">&lpar;</span><span class="s1">&apos;fs-extra&apos;</span><span class="p">&rpar;</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&apos;fs-extra&apos;</span><span class="p">)</span><span class="p">;</span>
 
-<span class="c1">&sol;&sol; Single line comment
+<span class="c1">// Single line comment
 </span><span class="c1"></span>
-<span class="cm">&sol;&ast;&ast;
-</span><span class="cm"> &ast; Multi-line
-</span><span class="cm"> &ast; Comment
-</span><span class="cm"> &ast;&sol;</span>
+<span class="cm">/**
+</span><span class="cm"> * Multi-line
+</span><span class="cm"> * Comment
+</span><span class="cm"> */</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">read</span><span class="p">&lpar;</span><span class="nx">file</span>: <span class="kt">string</span><span class="p">&rpar;</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">&lcub;</span>
-  <span class="kr">const</span> <span class="nx">buf</span> <span class="o">&equals;</span> <span class="nx">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">&lpar;</span><span class="nx">file</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">&lpar;</span><span class="p">&rpar;</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">read</span><span class="p">(</span><span class="nx">file</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">main&lpar;&rpar; &lcub;</span>
-  <span class="k">try</span> <span class="p">&lcub;</span>
-    <span class="nx">await</span> <span class="nx">read</span><span class="p">&lpar;</span><span class="s1">&apos;~&sol;example.txt&apos;</span><span class="p">&rsqb;</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="p">&rcub;</span> <span class="k">catch</span> <span class="p">&lpar;</span><span class="nx">err</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">&lpar;</span><span class="sb">&grave;</span><span class="sb">Failed to read file: </span><span class="si">&dollar;&lcub;</span><span class="nx">err</span><span class="si">&rcub;</span><span class="sb">&grave;</span><span class="p">&rpar;</span><span class="p">;</span>
-  <span class="p">&rcub;</span>
-<span class="p">&rcub;</span>
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">main() {</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nx">await</span> <span class="nx">read</span><span class="p">(</span><span class="s1">&apos;~/example.txt&apos;</span><span class="p">]</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sb">&grave;</span><span class="sb">Failed to read file: </span><span class="si">${</span><span class="nx">err</span><span class="si">}</span><span class="sb">&grave;</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><h2 id="html">HTML</h2>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;&excl;--</span><span class="c"> Single line comment </span><span class="c">--&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!--</span><span class="c"> Single line comment </span><span class="c">--&gt;</span>
 
-<span class="c">&lt;&excl;--</span><span class="c">
+<span class="c">&lt;!--</span><span class="c">
 </span><span class="c">Muti</span><span class="c">-</span><span class="c">line
 </span><span class="c">Comment
 </span><span class="c"></span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>This is HTML.<span class="p">&lt;</span><span class="p">&sol;</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>This is HTML.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="css">CSS</h2>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">&sol;&ast; Single line comment &ast;&sol;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* Single line comment */</span>
 
-<span class="c">&sol;&ast;&ast;
-</span><span class="c"> &ast; Multi-line
-</span><span class="c"> &ast; comment
-</span><span class="c"> &ast;&sol;</span>
+<span class="c">/**
+</span><span class="c"> * Multi-line
+</span><span class="c"> * comment
+</span><span class="c"> */</span>
 
-<span class="nt">body</span> <span class="p">&lcub;</span>
-  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">&lpar;</span><span class="mi">255</span><span class="p">&comma;</span> <span class="mi">0</span><span class="p">&comma;</span> <span class="mi">0</span><span class="p">&comma;</span> <span class="mf">.9</span><span class="p">&rpar;</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.9</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">example-classname</span> <span class="p">&lcub;</span>
-  <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">&lpar;</span><span class="o">-</span><span class="o">-</span><span class="kc">green</span><span class="p">&rpar;</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="p">.</span><span class="nc">example-classname</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">-</span><span class="o">-</span><span class="kc">green</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">&num;</span><span class="nn">example-id</span> <span class="p">&lcub;</span>
+<span class="p">#</span><span class="nn">example-id</span> <span class="p">{</span>
   <span class="k">background</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="p">}</span>
 
-<span class="p">:</span><span class="nd">root</span> <span class="p">&lcub;</span>
-  <span class="nv">--green</span><span class="p">:</span> <span class="mh">&num;00FF00</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+  <span class="nv">--green</span><span class="p">:</span> <span class="mh">#00FF00</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nt">p</span><span class="p">::</span><span class="nd">after</span> <span class="p">&lcub;</span>
+<span class="nt">p</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
   <span class="k">content</span><span class="p">:</span> <span class="s1">&apos;&apos;</span><span class="p">;</span>
   <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">&rcub;</span>
+<span class="p">}</span>
 </code></pre></div><h2 id="bash">Bash</h2>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">&num;&excl;&sol;bin&sol;bash
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
-<span class="c1">&num; Single line comment</span>
+<span class="c1"># Single line comment</span>
 
-<span class="c1">&num; Multi-line</span>
-<span class="c1">&num; comment</span>
+<span class="c1"># Multi-line</span>
+<span class="c1"># comment</span>
 
 <span class="nb">trap</span> uncaughtError ERR
-<span class="k">function</span> uncaughtError <span class="o">&lcub;</span>
-  <span class="nb">echo</span> -e <span class="s2">&quot;&bsol;n&bsol;t❌  Error&bsol;n&quot;</span>
-  <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">&dollar;&lpar;</span>&lt;<span class="si">&dollar;&lcub;</span><span class="nv">ERROR&lowbar;LOG</span><span class="si">&rcub;</span><span class="k">&rpar;</span><span class="s2">&quot;</span>
-  <span class="nb">echo</span> -e <span class="s2">&quot;&bsol;n&bsol;t😞  Sorry&bsol;n&quot;</span>
-  <span class="nb">exit</span> <span class="nv">&dollar;&quest;</span>
-<span class="o">&rcub;</span>
+<span class="k">function</span> uncaughtError <span class="o">{</span>
+  <span class="nb">echo</span> -e <span class="s2">&quot;\n\t❌  Error\n&quot;</span>
+  <span class="nb">echo</span> <span class="s2">&quot;</span><span class="k">$(</span>&lt;<span class="si">${</span><span class="nv">ERROR_LOG</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span>
+  <span class="nb">echo</span> -e <span class="s2">&quot;\n\t😞  Sorry\n&quot;</span>
+  <span class="nb">exit</span> <span class="nv">$?</span>
+<span class="o">}</span>
 
-<span class="k">function</span> runExample<span class="o">&lpar;</span><span class="o">&rpar;</span> <span class="o">&lcub;</span>
-  <span class="nb">read</span> -p <span class="s2">&quot;Should run&quest; : &quot;</span> <span class="nv">&dollar;USER&lowbar;INPUT</span>
-  <span class="k">select</span> yn in <span class="s2">&quot;Yes&quot;</span> <span class="s2">&quot;No &lpar;Retry&rpar;&quot;</span> <span class="s2">&quot;No &lpar;Skip&rpar;&quot;</span><span class="p">;</span> <span class="k">do</span>
-      <span class="k">case</span> <span class="nv">&dollar;yn</span> in
-          Yes <span class="o">&rpar;</span>
+<span class="k">function</span> runExample<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nb">read</span> -p <span class="s2">&quot;Should run? : &quot;</span> <span class="nv">$USER_INPUT</span>
+  <span class="k">select</span> yn in <span class="s2">&quot;Yes&quot;</span> <span class="s2">&quot;No (Retry)&quot;</span> <span class="s2">&quot;No (Skip)&quot;</span><span class="p">;</span> <span class="k">do</span>
+      <span class="k">case</span> <span class="nv">$yn</span> in
+          Yes <span class="o">)</span>
               <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-              <span class="nb">eval</span> <span class="nv">&dollar;USER&lowbar;INPUT</span>
+              <span class="nb">eval</span> <span class="nv">$USER_INPUT</span>
               break<span class="p">;</span><span class="p">;</span>
-          <span class="s2">&quot;No &lpar;Retry&rpar;&quot;</span> <span class="o">&rpar;</span>
+          <span class="s2">&quot;No (Retry)&quot;</span> <span class="o">)</span>
               runExample
               break<span class="p">;</span><span class="p">;</span>
-          <span class="s2">&quot;No &lpar;Skip&rpar;&quot;</span> <span class="o">&rpar;</span>
+          <span class="s2">&quot;No (Skip)&quot;</span> <span class="o">)</span>
               break<span class="p">;</span><span class="p">;</span>
       <span class="k">esac</span>
   <span class="k">done</span>
   <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-<span class="o">&rcub;</span>
+<span class="o">}</span>
 
-<span class="nb">echo</span> -e <span class="s2">&quot;&bsol;n📓  Example script&bsol;n&quot;</span>
+<span class="nb">echo</span> -e <span class="s2">&quot;\n📓  Example script\n&quot;</span>
 
 runExample
 </code></pre></div><h2 id="go">Go</h2>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span class="c1">&sol;&sol; Single line comment
+<span class="c1">// Single line comment
 </span><span class="c1"></span>
-<span class="cm">&sol;&ast;&ast;
-</span><span class="cm"> &ast; Multi-line
-</span><span class="cm"> &ast; comment
-</span><span class="cm"> &ast;&sol;</span>
+<span class="cm">/**
+</span><span class="cm"> * Multi-line
+</span><span class="cm"> * comment
+</span><span class="cm"> */</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">&lpar;</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Hello world&quot;</span><span class="p">&rpar;</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Hello world&quot;</span><span class="p">)</span>
 
-  <span class="nx">test</span> <span class="o">:&equals;</span> <span class="s">&quot;example&quot;</span>
-  <span class="k">switch</span> <span class="nx">test</span> <span class="p">&lcub;</span>
+  <span class="nx">test</span> <span class="o">:=</span> <span class="s">&quot;example&quot;</span>
+  <span class="k">switch</span> <span class="nx">test</span> <span class="p">{</span>
   <span class="k">case</span> <span class="s">&quot;example&quot;</span><span class="p">:</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;I knew it&quot;</span><span class="p">&rpar;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;I knew it&quot;</span><span class="p">)</span>
     <span class="k">break</span><span class="p">;</span>
   <span class="k">default</span><span class="p">:</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;This makes no sense&excl;&quot;</span><span class="p">&rpar;</span>
-  <span class="p">&rcub;</span>
-<span class="p">&rcub;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;This makes no sense!&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
 </code></pre></div><h2 id="chroma-example">Chroma Example</h2>
 <p>Below is the example program used in the <a href="https://xyproto.github.io/splash/docs/longer/all.html">Chrome style gallery</a>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span class="kn">import</span> <span class="p">&lpar;</span>
+<span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
-    <span class="s">&quot;math&sol;rand&quot;</span>
+    <span class="s">&quot;math/rand&quot;</span>
     <span class="s">&quot;time&quot;</span>
-<span class="p">&rpar;</span>
+<span class="p">)</span>
 
-<span class="kd">type</span> <span class="nx">Moo</span> <span class="kd">struct</span> <span class="p">&lcub;</span>
+<span class="kd">type</span> <span class="nx">Moo</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="nx">Cow</span>   <span class="kt">int</span>
     <span class="nx">Sound</span> <span class="kt">string</span>
     <span class="nx">Tube</span>  <span class="kd">chan</span> <span class="kt">bool</span>
-<span class="p">&rcub;</span>
+<span class="p">}</span>
 
-<span class="c1">&sol;&sol; A cow will moo until it is being milked
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">cow</span><span class="p">&lpar;</span><span class="nx">num</span> <span class="kt">int</span><span class="p">&comma;</span> <span class="nx">mootube</span> <span class="kd">chan</span> <span class="nx">Moo</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nx">tube</span> <span class="o">:&equals;</span> <span class="nb">make</span><span class="p">&lpar;</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">&rpar;</span>
-    <span class="k">for</span> <span class="p">&lcub;</span>
-        <span class="k">select</span> <span class="p">&lcub;</span>
-        <span class="k">case</span> <span class="nx">mootube</span> <span class="o">&lt;-</span> <span class="nx">Moo</span><span class="p">&lcub;</span><span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;moo&quot;</span><span class="p">&comma;</span> <span class="nx">tube</span><span class="p">&rcub;</span><span class="p">:</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Cow number&quot;</span><span class="p">&comma;</span> <span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;mooed through the mootube&quot;</span><span class="p">&rpar;</span>
+<span class="c1">// A cow will moo until it is being milked
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">cow</span><span class="p">(</span><span class="nx">num</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">mootube</span> <span class="kd">chan</span> <span class="nx">Moo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">tube</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">{</span>
+        <span class="k">select</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="nx">mootube</span> <span class="o">&lt;-</span> <span class="nx">Moo</span><span class="p">{</span><span class="nx">num</span><span class="p">,</span> <span class="s">&quot;moo&quot;</span><span class="p">,</span> <span class="nx">tube</span><span class="p">}</span><span class="p">:</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Cow number&quot;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="s">&quot;mooed through the mootube&quot;</span><span class="p">)</span>
             <span class="o">&lt;-</span><span class="nx">tube</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Cow number&quot;</span><span class="p">&comma;</span> <span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;is being milked and stops mooing&quot;</span><span class="p">&rpar;</span>
-            <span class="nx">mootube</span> <span class="o">&lt;-</span> <span class="nx">Moo</span><span class="p">&lcub;</span><span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;mooh&quot;</span><span class="p">&comma;</span> <span class="kc">nil</span><span class="p">&rcub;</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Cow number&quot;</span><span class="p">&comma;</span> <span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;moos one last time in relief&quot;</span><span class="p">&rpar;</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Cow number&quot;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="s">&quot;is being milked and stops mooing&quot;</span><span class="p">)</span>
+            <span class="nx">mootube</span> <span class="o">&lt;-</span> <span class="nx">Moo</span><span class="p">{</span><span class="nx">num</span><span class="p">,</span> <span class="s">&quot;mooh&quot;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">}</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Cow number&quot;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="s">&quot;moos one last time in relief&quot;</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="k">default</span><span class="p">:</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Cow number&quot;</span><span class="p">&comma;</span> <span class="nx">num</span><span class="p">&comma;</span> <span class="s">&quot;mooed through the mootube and was ignored&quot;</span><span class="p">&rpar;</span>
-            <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">&lpar;</span><span class="nx">time</span><span class="p">.</span><span class="nf">Duration</span><span class="p">&lpar;</span><span class="nx">rand</span><span class="p">.</span><span class="nf">Int31n</span><span class="p">&lpar;</span><span class="mi">1000</span><span class="p">&rpar;</span><span class="p">&rpar;</span> <span class="o">&ast;</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">&rpar;</span>
-        <span class="p">&rcub;</span>
-    <span class="p">&rcub;</span>
-<span class="p">&rcub;</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Cow number&quot;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="s">&quot;mooed through the mootube and was ignored&quot;</span><span class="p">)</span>
+            <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Duration</span><span class="p">(</span><span class="nx">rand</span><span class="p">.</span><span class="nf">Int31n</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="p">)</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="c1">&sol;&sol; The farmer wants to turn on all the milktubes to stop the mooing
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">farmer</span><span class="p">&lpar;</span><span class="nx">numcows</span> <span class="kt">int</span><span class="p">&comma;</span> <span class="nx">mootube</span> <span class="kd">chan</span> <span class="nx">Moo</span><span class="p">&comma;</span> <span class="nx">farmertube</span> <span class="kd">chan</span> <span class="kt">string</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Farmer starts listening to the mootube&quot;</span><span class="p">&rpar;</span>
-    <span class="k">for</span> <span class="nx">unrelievedCows</span> <span class="o">:&equals;</span> <span class="nx">numcows</span><span class="p">;</span> <span class="nx">unrelievedCows</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="p">&lcub;</span>
-        <span class="nx">moo</span> <span class="o">:&equals;</span> <span class="o">&lt;-</span><span class="nx">mootube</span>
-        <span class="k">if</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Sound</span> <span class="o">&equals;&equals;</span> <span class="s">&quot;mooh&quot;</span> <span class="p">&lcub;</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Farmer heard a moo of relief from cow number&quot;</span><span class="p">&comma;</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">&rpar;</span>
+<span class="c1">// The farmer wants to turn on all the milktubes to stop the mooing
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">farmer</span><span class="p">(</span><span class="nx">numcows</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">mootube</span> <span class="kd">chan</span> <span class="nx">Moo</span><span class="p">,</span> <span class="nx">farmertube</span> <span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Farmer starts listening to the mootube&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">unrelievedCows</span> <span class="o">:=</span> <span class="nx">numcows</span><span class="p">;</span> <span class="nx">unrelievedCows</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="p">{</span>
+        <span class="nx">moo</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">mootube</span>
+        <span class="k">if</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Sound</span> <span class="o">==</span> <span class="s">&quot;mooh&quot;</span> <span class="p">{</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Farmer heard a moo of relief from cow number&quot;</span><span class="p">,</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">)</span>
             <span class="nx">unrelievedCows</span><span class="o">--</span>
-        <span class="p">&rcub;</span> <span class="k">else</span> <span class="p">&lcub;</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Farmer heard a&quot;</span><span class="p">&comma;</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Sound</span><span class="p">&comma;</span> <span class="s">&quot;from cow number&quot;</span><span class="p">&comma;</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">&rpar;</span>
-            <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">&lpar;</span><span class="mf">2e9</span><span class="p">&rpar;</span>
-            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Farmer starts the milking machine on cow number&quot;</span><span class="p">&comma;</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">&rpar;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Farmer heard a&quot;</span><span class="p">,</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Sound</span><span class="p">,</span> <span class="s">&quot;from cow number&quot;</span><span class="p">,</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">)</span>
+            <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mf">2e9</span><span class="p">)</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Farmer starts the milking machine on cow number&quot;</span><span class="p">,</span> <span class="nx">moo</span><span class="p">.</span><span class="nx">Cow</span><span class="p">)</span>
             <span class="nx">moo</span><span class="p">.</span><span class="nx">Tube</span> <span class="o">&lt;-</span> <span class="kc">true</span>
-        <span class="p">&rcub;</span>
-    <span class="p">&rcub;</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;Farmer doesn&apos;t hear a single moo anymore. All done&excl;&quot;</span><span class="p">&rpar;</span>
-    <span class="nx">farmertube</span> <span class="o">&lt;-</span> <span class="s">&quot;yey&excl;&quot;</span>
-<span class="p">&rcub;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;Farmer doesn&apos;t hear a single moo anymore. All done!&quot;</span><span class="p">)</span>
+    <span class="nx">farmertube</span> <span class="o">&lt;-</span> <span class="s">&quot;yey!&quot;</span>
+<span class="p">}</span>
 
-<span class="c1">&sol;&sol; The farm starts out with mooing cows that wants to be milked
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">runFarm</span><span class="p">&lpar;</span><span class="nx">numcows</span> <span class="kt">int</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nx">farmertube</span> <span class="o">:&equals;</span> <span class="nb">make</span><span class="p">&lpar;</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">&rpar;</span>
-    <span class="nx">mootube</span> <span class="o">:&equals;</span> <span class="nb">make</span><span class="p">&lpar;</span><span class="kd">chan</span> <span class="nx">Moo</span><span class="p">&rpar;</span>
-    <span class="k">for</span> <span class="nx">cownum</span> <span class="o">:&equals;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">cownum</span> <span class="p">&lt;</span> <span class="nx">numcows</span><span class="p">;</span> <span class="nx">cownum</span><span class="o">&plus;&plus;</span> <span class="p">&lcub;</span>
-        <span class="k">go</span> <span class="nf">cow</span><span class="p">&lpar;</span><span class="nx">cownum</span><span class="p">&comma;</span> <span class="nx">mootube</span><span class="p">&rpar;</span>
-    <span class="p">&rcub;</span>
-    <span class="k">go</span> <span class="nf">farmer</span><span class="p">&lpar;</span><span class="nx">numcows</span><span class="p">&comma;</span> <span class="nx">mootube</span><span class="p">&comma;</span> <span class="nx">farmertube</span><span class="p">&rpar;</span>
-    <span class="nx">farmerSaid</span> <span class="o">:&equals;</span> <span class="o">&lt;-</span><span class="nx">farmertube</span>
-    <span class="k">if</span> <span class="nx">farmerSaid</span> <span class="o">&equals;&equals;</span> <span class="s">&quot;yey&excl;&quot;</span> <span class="p">&lcub;</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;All cows are happy.&quot;</span><span class="p">&rpar;</span>
-    <span class="p">&rcub;</span>
-<span class="p">&rcub;</span>
+<span class="c1">// The farm starts out with mooing cows that wants to be milked
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">runFarm</span><span class="p">(</span><span class="nx">numcows</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">farmertube</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+    <span class="nx">mootube</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="nx">Moo</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">cownum</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">cownum</span> <span class="p">&lt;</span> <span class="nx">numcows</span><span class="p">;</span> <span class="nx">cownum</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">go</span> <span class="nf">cow</span><span class="p">(</span><span class="nx">cownum</span><span class="p">,</span> <span class="nx">mootube</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">go</span> <span class="nf">farmer</span><span class="p">(</span><span class="nx">numcows</span><span class="p">,</span> <span class="nx">mootube</span><span class="p">,</span> <span class="nx">farmertube</span><span class="p">)</span>
+    <span class="nx">farmerSaid</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">farmertube</span>
+    <span class="k">if</span> <span class="nx">farmerSaid</span> <span class="o">==</span> <span class="s">&quot;yey!&quot;</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;All cows are happy.&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">&lpar;</span><span class="p">&rpar;</span> <span class="p">&lcub;</span>
-    <span class="nf">runFarm</span><span class="p">&lpar;</span><span class="mi">4</span><span class="p">&rpar;</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">&lpar;</span><span class="s">&quot;done&quot;</span><span class="p">&rpar;</span>
-<span class="p">&rcub;</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">runFarm</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&quot;done&quot;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
 </main>
 </div>

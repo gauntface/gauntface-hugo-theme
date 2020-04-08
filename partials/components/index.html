@@ -23,19 +23,19 @@
 
   <div class="n-hopin-styleguide-l-main__content">
     <main class="n-hopin-styleguide-l-main__inner">
-<p>Components are picked up from partials&sol;components&sol;&ast; and will add each partial to the page.</p>
-<p>If you want to add a component to the page with some demo data create a file named <code>&lt;partial name&gt;.styleguide.html</code>&comma; and that will be added to the styleguide instead.</p>
-<p>For example&comma; if <code>partials&sol;componetns&sol;project-card.html</code> needs some text&comma; you can create
-<code>partials&sol;components&sol;project-card.styleguide.html</code> and give it contents that imports
+<p>Components are picked up from partials/components/* and will add each partial to the page.</p>
+<p>If you want to add a component to the page with some demo data create a file named <code>&lt;partial name&gt;.styleguide.html</code>, and that will be added to the styleguide instead.</p>
+<p>For example, if <code>partials/componetns/project-card.html</code> needs some text, you can create
+<code>partials/components/project-card.styleguide.html</code> and give it contents that imports
 the <code>project-card</code> partial
-&lpar;i.e. <code>&lcub;&lcub; partial &quot;styleguide&sol;components&sol;project-card.html&quot; &lpar;dict &quot;Title&quot; &quot;Example&quot;&rpar; &rcub;&rcub;</code>&rpar;.</p>
+(i.e. <code>{{ partial &quot;styleguide/components/project-card.html&quot; (dict &quot;Title&quot; &quot;Example&quot;) }}</code>).</p>
 <h2>footer</h2><footer class="c-footer">
   <div class="c-footer__content">
-    <a href="://twiter.com/gauntface">Twitter</a> &vert; <a href="://github.com/gauntface">GitHub</a> &vert; <a href="://www.linkedin.com/in/mattgaunt/">LinkedIn</a>
+    <a href="://twiter.com/gauntface">Twitter</a> | <a href="://github.com/gauntface">GitHub</a> | <a href="://www.linkedin.com/in/mattgaunt/">LinkedIn</a>
   </div>
 </footer><h3>Code</h3>
 
-      <pre><code>&lcub;&lcub; partial &quot;components&sol;footer.html&quot; &rcub;&rcub;</code></pre><h2>header</h2><header class="c-header">
+      <pre><code>{{ partial &quot;components/footer.html&quot; }}</code></pre><h2>header</h2><header class="c-header">
   <a href="/" class="c-header__logo">
     <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M988 36H36V987H988V36ZM0 0V1023H1024V0H0Z" fill="black"></path>
@@ -53,7 +53,7 @@ the <code>project-card</code> partial
   </a>
 </header><h3>Code</h3>
 
-      <pre><code>&lcub;&lcub; partial &quot;components&sol;header.html&quot; &rcub;&rcub;</code></pre>
+      <pre><code>{{ partial &quot;components/header.html&quot; }}</code></pre>
 
 </main>
 </div>
