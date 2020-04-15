@@ -38,6 +38,8 @@ gulp.task('css', gulp.series(
     dst: themeDst,
   }, {
     importPaths: [themeSrc],
+    preserve: false,
+    cssVariablesDir: path.join(__dirname, 'src', 'static', 'css', 'variables'),
   }),
 ))
 

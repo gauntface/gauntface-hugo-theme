@@ -1,5 +1,5 @@
 .c-header {
-  color: var(--platnum);
+  color: var(--white);
   padding: var(--header-padding) var(--page-padding);
   background: var(--dark-grey);
 }

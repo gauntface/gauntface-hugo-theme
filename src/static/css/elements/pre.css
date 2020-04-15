@@ -3,8 +3,6 @@ pre {
   padding: var(--pre-padding);
   border-radius: var(--pre-padding);
   overflow-x: auto;
-  
-  box-shadow: 0px 2px 8px var(--drop-shadow);
 }
 
 pre code {
