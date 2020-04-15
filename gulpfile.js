@@ -26,7 +26,7 @@ gulp.task('clean', gulp.series(
 ))
 
 gulp.task('typescript', gulp.series(
-  tsBrowser.gulpBuild('hopin.styleguide', {
+  tsBrowser.gulpBuild('gauntface.theme', {
     src: themeSrc,
     dst: themeDst,
   })
