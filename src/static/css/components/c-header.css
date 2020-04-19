@@ -4,12 +4,9 @@
   background: var(--dark-grey);
 }
 
-.c-header__logo svg {
+.c-header__logo img {
+  display: block;
   width: 124px;
   height: 124px;
   margin: auto;
-}
-
-.c-header__logo svg path {
-  fill: var(--white);
 }

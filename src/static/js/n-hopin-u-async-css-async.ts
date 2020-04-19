@@ -1,7 +1,7 @@
 declare const haCSS: Array<string>;
 
 window.addEventListener('load', () => {
-  if (!haCSS) {
+  if (!('haCSS' in window)) {
     return
   }
 

@@ -4,7 +4,7 @@
   --page-padding: 24px;
   --header-padding: 64px;
   --footer-padding: 64px;
-  --inline-code-padding: 4px;
-  --pre-padding: 4px;
+  --inline-code-padding: 2px;
+  --pre-padding: 16px;
   --page-max-width: 800px;
 }

@@ -3,6 +3,7 @@ pre {
   padding: var(--pre-padding);
   border-radius: var(--pre-padding);
   overflow-x: auto;
+  color: var(--white);
 }
 
 pre code {
