@@ -21,7 +21,7 @@
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
     "ava": "3.7.1",
     "browser-sync": "2.26.7",
-    "dir-compare": "2.2.0",
+    "dir-compare": "2.3.0",
     "gulp": "4.0.2"
   },
   "dependencies": {
