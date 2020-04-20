@@ -11,21 +11,16 @@ function analytics() {
 
   const s = document.createElement('script');
   s.src = "https://www.googletagmanager.com/gtag/js?id=UA-161686512-1";
-  s.async = true;
-  s.defer = true;
+  document.body.appendChild(s);
 }
 
-function asyncCSS() {
-  if (!('haCSS' in window)) {
-    return
-  }
-
-  const head = document.querySelector('head');
-  for (const c of haCSS) {
+function asyncPreloadCSS() {
+  const styles = document.querySelectorAll<HTMLLinkElement>('link[rel="preload"][as="style"]')
+  for (const s of styles) {
     const l = document.createElement('link');
-    l.href = c;
-    l.rel = "stylesheet";
-    head.appendChild(l);
+    l.href = s.href;
+    l.rel = 'stylesheet';
+    document.head.appendChild(l);
   }
 }
 
@@ -36,8 +31,11 @@ function asyncDataSrc() {
   }
 }
 
-window.addEventListener('load', () => {
+function run() {
   analytics();
-  asyncCSS();
   asyncDataSrc();
-})
+  asyncPreloadCSS();
+}
+
+window.addEventListener('load', run);
+if (document.readyState == 'complete') { run() }
