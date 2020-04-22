@@ -12,7 +12,7 @@
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
-    "@hopin/hugo-base-theme": "0.0.280",
+    "@hopin/hugo-base-theme": "0.0.283",
     "@hopin/hugo-styleguide": "0.0.172",
     "@hopin/wbt-clean": "0.0.96",
     "@hopin/wbt-css": "0.0.96",
