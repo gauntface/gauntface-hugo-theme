@@ -15,7 +15,7 @@
     "@hopin/hugo-base-theme": "0.0.280",
     "@hopin/hugo-styleguide": "0.0.171",
     "@hopin/wbt-clean": "0.0.96",
-    "@hopin/wbt-css": "0.0.94",
+    "@hopin/wbt-css": "0.0.96",
     "@hopin/wbt-html-assets": "0.0.96",
     "@hopin/wbt-ts-browser": "0.0.94",
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
