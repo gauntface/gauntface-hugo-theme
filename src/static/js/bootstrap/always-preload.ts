@@ -1,6 +1,4 @@
-import {OnLoad} from './utils/_onload';
-
-declare const haCSS: Array<string>;
+import {OnLoad} from '../utils/_onload';
 
 function analytics() {
   (<any>window).dataLayer = [];
