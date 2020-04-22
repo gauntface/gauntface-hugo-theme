@@ -1,3 +1,5 @@
+import {OnLoad} from '../../js/utils/_onload';
+
 class LiteYTEmbed {
 
   private element: HTMLElement;
@@ -17,11 +19,9 @@ class LiteYTEmbed {
 
   setup() {
       // On hover (or tap), warm up the TCP connections we're (likely) about to use.
-      this.anchor.addEventListener('pointerover', this.warmConnections, {once: true});
+      this.anchor.addEventListener('pointerover', () => this.warmConnections(), {once: true});
 
-      // Once the user clicks, add the real iframe and drop our play button
-      // TODO: In the future we could be like amp-youtube and silently swap in the iframe during idle time
-      //   We'd want to only do this for in-viewport or near-viewport ones: https://github.com/ampproject/amphtml/pull/5003
+      // Once the user clicks, add the real iframe
       this.anchor.addEventListener('click', (e) => {
         e.preventDefault();
         this.addIframe();
@@ -32,7 +32,7 @@ class LiteYTEmbed {
     const iframeHTML = `<iframe 
     allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
     src="https://www.youtube-nocookie.com/embed/${this.videoID}?autoplay=1"
-    style="width:100%;height:100%;"
+    style="width:100%;height:100%;border:none;"
     ></iframe>`;
     this.element.removeChild(this.anchor);
     this.element.insertAdjacentHTML('beforeend', iframeHTML);
@@ -73,7 +73,7 @@ class LiteYTEmbed {
   }
 }
 
-window.addEventListener('load', () => {
+OnLoad(() => {
   const ytElements = document.querySelectorAll<HTMLElement>('.n-hopin-lite-yt');
   for (const e of ytElements) {
     new LiteYTEmbed(e);

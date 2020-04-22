@@ -1,3 +1,5 @@
+import {OnLoad} from './utils/_onload';
+
 declare const haCSS: Array<string>;
 
 function analytics() {
@@ -37,5 +39,4 @@ function run() {
   asyncPreloadCSS();
 }
 
-window.addEventListener('load', run);
-if (document.readyState == 'complete') { run() }
+OnLoad(run);
