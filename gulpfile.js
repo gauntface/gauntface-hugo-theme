@@ -33,14 +33,16 @@ gulp.task('typescript', gulp.series(
 ))
 
 gulp.task('css', gulp.series(
-  css.gulpBuild({
-    src: themeSrc,
-    dst: themeDst,
-  }, {
-    importPaths: [themeSrc],
-    preserve: false,
-    cssVariablesDir: path.join(__dirname, 'src', 'static', 'css', 'variables'),
-  }),
+  async () => {
+    return css.build({
+      src: themeSrc,
+      dst: themeDst,
+    }, {
+      importPaths: [themeSrc],
+      preserve: process.env.ENV == 'dev',
+      cssVariablesDir: path.join(__dirname, 'src', 'static', 'css', 'variables'),
+    });
+  }
 ))
 
 gulp.task('copy', gulp.series(
@@ -50,8 +52,23 @@ gulp.task('copy', gulp.series(
   }
 ))
 
+gulp.task('build-dev', gulp.series(
+  'clean',
+  async () => {
+    process.env.ENV = 'dev';
+  },
+  gulp.parallel(
+    'typescript',
+    'css',
+    'copy',
+  ),
+))
+
 gulp.task('build', gulp.series(
   'clean',
+  async () => {
+    process.env.ENV = 'prod';
+  },
   gulp.parallel(
     'typescript',
     'css',
@@ -192,7 +209,18 @@ gulp.task('restart-server', async () => {
   serverInstance.kill();
 });
 
-gulp.task('watch-theme', () => {
+gulp.task('watch-theme-dev', () => {
+  const opts = {
+    ignoreInitial: false,
+  };
+  return gulp.watch(
+    [path.join(themeSrc, '**', '*')],
+    opts,
+    gulp.series('build-dev', 'gauntface-theme', 'restart-server'),
+  );
+});
+
+gulp.task('watch-theme-prod', () => {
   const opts = {
     ignoreInitial: false,
   };
@@ -205,10 +233,10 @@ gulp.task('watch-theme', () => {
 
 gulp.task('watch',
   gulp.series(
-    'build',
+    'build-dev',
     'themes',
     gulp.parallel(
-      'watch-theme',
+      'watch-theme-dev',
       'hugo-server',
     ),
   )
