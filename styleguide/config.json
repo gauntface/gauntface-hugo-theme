@@ -5,9 +5,14 @@
    "theme": ["gauntface", "hopin-base-theme", "hopin-styleguide"],
    "params": {
    },
+   "disableHugoGeneratorInject": true,
    "markup": {
+      "goldmark": {
+         "renderer": {
+            "unsafe": true
+         }
+      },
       "highlight": {
-         "noClasses": false,
          "codeFences": false
       }
    }

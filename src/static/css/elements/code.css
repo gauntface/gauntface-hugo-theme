@@ -3,4 +3,5 @@ code {
   border-radius: var(--inline-code-padding);
   font-family: var(--code-font-family);
   background: var(--light-grey);
+  color: var(--blue);
 }
