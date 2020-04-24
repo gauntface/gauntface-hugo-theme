@@ -25,6 +25,7 @@
     "gulp": "4.0.2"
   },
   "dependencies": {
+    "@gauntface/hugo-node": "^1.0.0",
     "fs-extra": "9.0.0"
   },
   "main": "index.js",
