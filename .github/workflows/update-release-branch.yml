@@ -1,0 +1,18 @@
+on:
+  schedule:
+    # Publish every Sunday
+    - cron:  '* * * * 0'
+name: Update release branch
+jobs:
+  update-release-branch:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: release
+    
+      - name: Update release branch
+        run: |
+          git fetch origin
+          git reset origin/master --hard
+          git push origin release -f
