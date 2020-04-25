@@ -12,6 +12,7 @@
     "test": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
+    "@gauntface/hugo-node": "^1.0.0",
     "@hopin/hugo-base-theme": "0.0.296",
     "@hopin/hugo-styleguide": "0.0.183",
     "@hopin/wbt-clean": "0.0.99",
@@ -25,7 +26,6 @@
     "gulp": "4.0.2"
   },
   "dependencies": {
-    "@gauntface/hugo-node": "^1.0.0",
     "fs-extra": "9.0.0"
   },
   "main": "index.js",
