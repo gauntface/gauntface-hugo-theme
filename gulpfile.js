@@ -159,11 +159,10 @@ for (const wt of watchTasks) {
   const taskName = `watch-theme-${wt.task}`;
   gulp.task(taskName, () => {
     const opts = {
-      ignoreInitial: false,
       delay: 500,
     };
     return gulp.watch(
-      [path.join(themeSrc, '**', `*.${wt.ext}`)],
+      [path.posix.join(themeSrc, '**', `*.${wt.ext}`)],
       opts,
       gulp.series(wt.task, 'styleguide-gf-theme', 'hugo-server-restart'),
     );
