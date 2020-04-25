@@ -1,6 +1,6 @@
 # Gauntface Hugo Theme
 
-![Build and Publish to NPM](https://github.com/gauntface/gauntface-hugo-theme/workflows/Build%20and%20Publish/badge.svg)
+[![Build and Test](https://github.com/gauntface/gauntface-hugo-theme/workflows/Build%20and%20Test/badge.svg)](https://github.com/gauntface/gauntface-hugo-theme/actions?query=workflow%3A%22Build+and+Test%22)
 
 This repo contains a theme to use with gauntface.com
 
