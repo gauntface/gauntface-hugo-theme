@@ -1,0 +1,23 @@
+.c-blog-pages-nav {
+  display: flex;
+
+  max-width: 360px;
+
+  flex-direction: row;
+  text-align: center;
+  align-items: center;;
+  vertical-align: middle;
+  
+  margin: var(--footer-padding) auto 0 auto;
+}
+
+.c-blog-pages-nav__item {
+  flex: 1;
+}
+
+.c-blog-pages-nav__btn {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  padding: 12px;
+  text-decoration: none;
+}

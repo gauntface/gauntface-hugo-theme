@@ -2,16 +2,17 @@
 {{ partial "layouts/l-default-open.html"}}
 {{.Content}}
 
-<h2>Some Posts.</h2>
+<h2>Recent Posts...</h2>
 
 {{- $blogPosts := where $.Site.RegularPages "Section" "blog" -}}
 
-<ol>
-  {{ range first 5 $blogPosts }}
-  <li>{{.Date.Format "2006-01-02"}}: <a href="{{.RelPermalink}}">{{.Title}}</a></li>
-  <li>{{ .Params.excerpt }}</li>
-  {{ end }}
-</ol>
+<div class="l-blog-list">
+{{ range first 6 $blogPosts }}
+  {{ partial "components/blog-item.html" . }}
+{{ end }}
+</div>
+
+<p style="text-align:center"><a href="/blog/">View Archive</a></p>
 
 {{ partial "layouts/l-default-close.html"}}
 {{ end }}
