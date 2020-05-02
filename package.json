@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@gauntface/hugo-node": "1.0.4",
-    "@hopin/hugo-base-theme": "0.0.299",
+    "@hopin/hugo-base-theme": "0.0.300",
     "@hopin/hugo-styleguide": "0.0.185",
     "@hopin/wbt-clean": "0.0.106",
     "@hopin/wbt-css": "0.0.106",
