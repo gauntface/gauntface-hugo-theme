@@ -14,7 +14,7 @@
   "devDependencies": {
     "@gauntface/hugo-node": "1.0.12",
     "@hopin/hugo-base-theme": "0.0.321",
-    "@hopin/hugo-styleguide": "0.0.191",
+    "@hopin/hugo-styleguide": "0.0.192",
     "@hopin/wbt-clean": "0.0.126",
     "@hopin/wbt-css": "0.0.126",
     "@hopin/wbt-html-assets": "0.0.126",
