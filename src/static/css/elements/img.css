@@ -1,3 +1,7 @@
 img {
   background: var(--light-grey);
 }
+
+img.is-loaded {
+  background: none;
+}
