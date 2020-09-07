@@ -15,11 +15,14 @@
   font-style: italic;
 }
 
+.c-blog-item__img img {
+  width: 100%;
+}
 
 .c-blog-item {
   display: grid;
 
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-gap: 12px;
   column-gap: 24px;
 }
