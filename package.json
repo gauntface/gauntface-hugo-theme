@@ -20,7 +20,7 @@
     "@hopin/wbt-css": "0.0.126",
     "@hopin/wbt-html-assets": "0.0.126",
     "@hopin/wbt-ts-browser": "0.0.113",
-    "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
+    "@types/w3c-css-typed-object-model-level-1": "20180410.0.3",
     "ava": "3.15.0",
     "browser-sync": "2.27.4",
     "dir-compare": "3.3.0",
