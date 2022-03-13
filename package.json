@@ -22,7 +22,7 @@
     "@hopin/wbt-ts-browser": "0.0.113",
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.1",
     "ava": "4.1.0",
-    "browser-sync": "2.27.7",
+    "browser-sync": "2.27.8",
     "dir-compare": "4.0.0",
     "gulp": "4.0.2"
   },
