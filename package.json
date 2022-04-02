@@ -13,7 +13,7 @@
     "ava": "ava ./test/*-test.js --verbose"
   },
   "devDependencies": {
-    "@gauntface/hugo-node": "1.0.20",
+    "@gauntface/hugo-node": "1.0.21",
     "@hopin/hugo-base-theme": "0.0.353",
     "@hopin/hugo-styleguide": "0.0.206",
     "@hopin/wbt-clean": "0.0.126",
